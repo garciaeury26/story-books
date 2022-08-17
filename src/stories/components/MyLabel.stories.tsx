@@ -17,6 +17,9 @@ export default {
                 type: "color",
                 presetColors: ['#ff0000', '#00ff00', '#0000ff'],
             }
+        },
+        bgColor: {
+            control: { type: "color" }
         }
     }
 } as ComponentMeta<typeof MyLabel>;
@@ -56,4 +59,13 @@ CustomColor.args = {
     style: "bold",
     allInCapital: true,
     fontColor: "#59d669"
+}
+
+// Label with Background
+export const LabelWithBackground = Template.bind({});
+LabelWithBackground.args = {
+    label: 'Label with Background',
+    style: "bold",
+    bgColor: "#222",
+    color: "tertiary"
 }

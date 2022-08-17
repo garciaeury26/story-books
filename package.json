@@ -18,7 +18,8 @@
   "scripts": {
     "start": "yarn storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=0e6ab58dbe16"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,9 @@
     "@storybook/manager-webpack4": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5"
-  }
+    "babel-loader": "^8.2.5",
+    "chromatic": "^6.7.4"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "story-books-app@0.1.0"
 }

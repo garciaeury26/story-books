@@ -11,6 +11,10 @@ export interface MyLabelProps {
    */
     color?: "primary" | "secondary" | "tertiary",
     /**
+    *Color of the label
+    */
+    bgColor?: string,
+    /**
      * Title of the text
      */
     label: string,
@@ -30,16 +34,17 @@ export interface MyLabelProps {
 
 export const MyLabel = ({
     allInCapital = false,
+    bgColor,
     color,
     label = "Label",
     size = "h3",
     style = "italic",
-    fontColor
+    fontColor,
 
 }: MyLabelProps) => {
     return (
         <span
-            style={{ color: fontColor }}
+            style={{ color: fontColor, backgroundColor: bgColor }}
             className={`label ${size} ${style} text-${color} ${allInCapital && "capitalize"}`}>
             {label}
         </span>
