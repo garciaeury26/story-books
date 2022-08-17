@@ -2,6 +2,10 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.capitalize {
+    text-transform: uppercase;
+}
+
 .normal {
     font-size: 14px;
 }
@@ -28,4 +32,12 @@
 
 .text-tertiary {
     color: #ee6c4d;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
 }
