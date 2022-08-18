@@ -39,6 +39,6 @@ jobs:
       - name: Semantic Realease
         # variables => nombre:${{secrets_Nombre que le asisgnaste en githud}}
         env: 
-          GITHUB_TOKEN: ${{secrets_GH_TOKEN}}
-          NPM_TOKEN: ${{secrets_NPM_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npx semantic-realease
