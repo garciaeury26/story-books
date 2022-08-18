@@ -1,5 +1,39 @@
 {
-  "name": "story-books-app",
+  "author": {
+    "name": "Eury Joel"
+  },
+  "peerDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.49",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "copyfiles": "^2.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garciaeury26"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://portafolio-blush-gamma.vercel.app/",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "name": "hiper-text-style",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,13 +44,18 @@
     "@types/node": "^16.11.49",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "copyfiles": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "yarn storybook",
+    "build": "yarn clean && tsc && yarn copy-files",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=0e6ab58dbe16"
@@ -50,8 +89,17 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
-    "chromatic": "^6.7.4"
+    "chromatic": "^6.7.4",
+    "semantic-release": "^19.0.3"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "story-books-app@0.1.0"
+  "_id": "story-books-app@0.1.0",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }

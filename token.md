@@ -1,0 +1,4 @@
+gitHudToken=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
+
+npmToken=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
+
