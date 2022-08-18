@@ -25,7 +25,7 @@ jobs:
 
       # pasos realizados por mi 
       - name: Setup Node.js
-        uses: actions/setup-node@node@v1
+        uses: actions/setup-node@v1
         with: 
           node-version: 14.17
 

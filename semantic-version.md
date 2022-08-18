@@ -61,8 +61,14 @@ yarn add -D semantic-release
 
 *Agregamos esta configuracion en el archivo yml este archivo nos ayura aser comandos y la configuracion de nuestro proyecto en  githud actions*
 ```
-   - name: Setup Node.js
-        uses: actions/setup-node@node@v1
+   # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # pasos realizados por mi 
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with: 
           node-version: 14.17
 
@@ -74,10 +80,17 @@ yarn add -D semantic-release
         rund: yarn build
 
       - name: Semantic Realease
-        # variables
+        # variables => nombre:${{secrets_Nombre que le asisgnaste en githud}}
         env: 
           GITHUB_TOKEN: ${{secrets_GH_TOKEN}}
           NPM_TOKEN: ${{secrets_NPM_TOKEN}}
         rund: npx semantic-realease
-
 ```
+
+*Ejecutamos los siguientes comabdis*
+```
+git add .
+git commit -m "feat:Initial commit"
+git push
+```
+*Recuerda que el commit puedes agregar la opcion de que tipo de actualiacion es: feat:*
