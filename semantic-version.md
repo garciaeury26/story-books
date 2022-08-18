@@ -74,17 +74,18 @@ yarn add -D semantic-release
 
       # intalacion de dependencies
       - name: Install Dependencies
-        rund: yarn install
+        run: yarn install
 
       - name: Build App
-        rund: yarn build
+        run: yarn build
 
       - name: Semantic Realease
         # variables => nombre:${{secrets_Nombre que le asisgnaste en githud}}
         env: 
           GITHUB_TOKEN: ${{secrets_GH_TOKEN}}
           NPM_TOKEN: ${{secrets_NPM_TOKEN}}
-        rund: npx semantic-realease
+        run: npx semantic-realease
+
 ```
 
 *Ejecutamos los siguientes comabdis*
