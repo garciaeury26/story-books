@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/garciaeury26"
+    "url": "https://github.com/garciaeury26/story-books"
   },
   "release": {
     "branches": [
@@ -33,7 +33,7 @@
   "homepage": "https://portafolio-blush-gamma.vercel.app/",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "name": "hiper-text-style",
+  "name": "hiper-text-style-joel",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
