@@ -1,15 +1,15 @@
+
 # This is a basic workflow to help you get started with Actions
 
-name: Semantic Realease
+name: Semantic Release
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
-
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,24 +21,20 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # pasos realizados por mi 
+      - uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v1
-        with: 
+        with:
           node-version: 14.17
 
-      # intalacion de dependencies
       - name: Install Dependencies
         run: yarn install
 
       - name: Build App
         run: yarn build
 
-      - name: Semantic Realease
-        # variables => nombre:${{secrets_Nombre que le asisgnaste en githud}}
-        env: 
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
