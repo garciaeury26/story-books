@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Semantoc Realease
+name: Semantic Realease
 
 # Controls when the workflow will run
 on:
@@ -39,6 +39,6 @@ jobs:
       - name: Semantic Realease
         # variables => nombre:${{secrets_Nombre que le asisgnaste en githud}}
         env: 
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
