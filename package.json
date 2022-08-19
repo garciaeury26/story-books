@@ -2,6 +2,26 @@
   "author": {
     "name": "Eury Joel"
   },
+  "license": "MIT",
+  "name": "hiper-text-style-joel",
+  "homepage": "https://portafolio-blush-gamma.vercel.app/",
+  "main": "dist/index.js",
+  "version": "0.1.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garciaeury26/story-books"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "typings": "dist/index.d.ts",
   "peerDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -17,25 +37,6 @@
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/garciaeury26/story-books"
-  },
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "homepage": "https://portafolio-blush-gamma.vercel.app/",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "name": "hiper-text-style-joel",
-  "version": "0.1.0",
-  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
